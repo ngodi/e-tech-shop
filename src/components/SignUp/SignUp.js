@@ -6,8 +6,8 @@ import CustomButton from '../CustomButton/CustomButton';
 import { auth, createUserProfileDocument } from '../../firebase/firebase';
 
 class SignUp extends React.Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
 
         this.state = {
             displayName: "",
@@ -28,7 +28,7 @@ class SignUp extends React.Component {
         try{
           const {user} = await auth.createUserWithEmailAndPassword(email, password);
 
-          createUserProfileDocument(user, {displayName});
+          await createUserProfileDocument(user, {displayName});
 
           this.setState({
             displayName: "",
