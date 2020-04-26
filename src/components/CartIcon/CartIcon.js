@@ -7,7 +7,7 @@ import './CartIcon.scss';
 
 const CartIcon = ({ toggleCartHidden }) => (
     <div className="cart-icon" onClick = { toggleCartHidden }>
-        <img classname="cart-img" src="./cart.png" width="100%"/>
+        <img className="cart-img" src="./cart.png" width="100%"/>
         <span className="item-count">0</span>
     </div>
 )
