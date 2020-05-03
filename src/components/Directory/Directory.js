@@ -22,7 +22,7 @@ class Directory extends Component {
         return(
             <div className="directory">
                {this.state.sections.map(({id, ...otherSectionProps}) => 
-                   (<MenuItem id= {id} {...otherSectionProps} />)
+                   (<MenuItem key= {id} {...otherSectionProps} />)
                )}
             </div>
         )

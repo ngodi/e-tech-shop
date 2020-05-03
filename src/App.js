@@ -5,10 +5,15 @@ import { connect } from 'react-redux';
 
 import HomePage from './pages/Homepage/HomePage';
 import ShopPage from './pages/Shop/ShopPage';
+
 import Header from './components/Header/Header';
+
 import SignInAndSignUpPage from './pages/SignInAndSignUpPage/SignInAndSignUpPage';
 import { auth, createUserProfileDocument } from './firebase/firebase';
 import { setCurrentUser} from './redux/user/user.action';
+
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser} from './redux/user/user.selector';
 
 class App extends Component {
 
@@ -54,9 +59,10 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ user}) => ({
-  currentUser: user.currentUser
-})
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+});
+
 const mapDispatchToProps = dispatch => ({
 setCurrentUser: user => dispatch(setCurrentUser(user))
 });
