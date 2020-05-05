@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import HomePage from './pages/Homepage/HomePage';
 import ShopPage from './pages/Shop/ShopPage';
+import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 
 import Header from './components/Header/Header';
 
@@ -53,6 +54,7 @@ class App extends Component {
            )
           }
            />
+           <Route exact path='/checkout' component={CheckoutPage} />
         </Switch>
       </div>
     );
