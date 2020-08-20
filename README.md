@@ -4,7 +4,7 @@ e-tech-shop
 ![e-tech-shop](shop.jpg)
 
 ### Introduction
-An e-commerce platform built with react.js in the front-end and firebase backend. The has option to view products by category, preview products in a given category, add products to cart and make payment.
+An e-commerce platform built with react.js in the front-end and firebase backend. They have the option to view products by category, preview products in a given category, add products to cart, and make payment.
 ### Features
 
 * User registration and authentication
